@@ -131,3 +131,12 @@ if __name__ == '__main__':
     master_app.app.run(debug=False)
 
     # master_app.cam.kill_all()
+
+
+# Go Live
+
+# run the index.py file
+
+# http://127.0.0.1:5000/start_triangulation
+
+
