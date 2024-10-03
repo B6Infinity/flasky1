@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D World</title>
+    <link rel="stylesheet" href="public/style.css">
+
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@<version>/examples/jsm/"
+          }
+        }
+    </script>
+
+</head>
+<body>
+    <div id="root-window">
+        <div id="render-target"></div>
+    </div>
+
+
+    <button id="isometric_view_btn" class="func_btn">Isometric</button>
+    <button id="lookatorigin_btn" class="func_btn">Look at Origin</button>
+
+    <script type="module">
+        import {createScene} from './src/scene.js';
+
+        window.onload = () => {
+            window.scene = createScene();
+            window.scene.setIsometricView();
+
+            document.getElementById('isometric_view_btn').addEventListener('click', () => {
+                window.scene.setIsometricView();
+            });
+            document.getElementById('lookatorigin_btn').addEventListener('click', () => {
+                window.scene.lookAtOrigin();
+            });
+
+            window.scene.start();
+        }
+
+        // Prevent Right click
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+    </script>
+</body>
+</html>

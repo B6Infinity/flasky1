@@ -1,0 +1,96 @@
+[0.129s] colcon DEBUG Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/bravo6/Desktop/Archive/OrbitControls_3js']
+[0.129s] colcon DEBUG Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/bravo6/Desktop/Archive/OrbitControls_3js'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], topological_order=False, names_only=False, paths_only=True, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x72bf4652f820>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x72bf4652e410>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x72bf4652e410>>, mixin_verb=('list',))
+[0.423s] colcon.colcon_core.package_discovery Level 1 discover_packages(colcon_meta) check parameters
+[0.423s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) check parameters
+[0.423s] colcon.colcon_core.package_discovery Level 1 discover_packages(ignore) check parameters
+[0.423s] colcon.colcon_core.package_discovery Level 1 discover_packages(path) check parameters
+[0.423s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) discover
+[0.423s] colcon.colcon_core.package_discovery INFO Crawling recursively for packages in '/home/bravo6/Desktop/Archive/OrbitControls_3js'
+[0.424s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extensions ['ignore', 'ignore_ament_install']
+[0.424s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extension 'ignore'
+[0.424s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extension 'ignore_ament_install'
+[0.424s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extensions ['colcon_pkg']
+[0.424s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extension 'colcon_pkg'
+[0.424s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extensions ['colcon_meta']
+[0.424s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extension 'colcon_meta'
+[0.424s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extensions ['ros']
+[0.424s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extension 'ros'
+[0.444s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extensions ['cmake', 'python']
+[0.444s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extension 'cmake'
+[0.444s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extension 'python'
+[0.444s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extensions ['python_setup_py']
+[0.444s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js) by extension 'python_setup_py'
+[0.444s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extensions ['ignore', 'ignore_ament_install']
+[0.444s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extension 'ignore'
+[0.444s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extension 'ignore_ament_install'
+[0.444s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extensions ['colcon_pkg']
+[0.444s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extension 'colcon_pkg'
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extensions ['colcon_meta']
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extension 'colcon_meta'
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extensions ['ros']
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extension 'ros'
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extensions ['cmake', 'python']
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extension 'cmake'
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extension 'python'
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extensions ['python_setup_py']
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/api) by extension 'python_setup_py'
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extensions ['ignore', 'ignore_ament_install']
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extension 'ignore'
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extension 'ignore_ament_install'
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extensions ['colcon_pkg']
+[0.445s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extension 'colcon_pkg'
+[0.446s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extensions ['colcon_meta']
+[0.446s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extension 'colcon_meta'
+[0.446s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extensions ['ros']
+[0.446s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extension 'ros'
+[0.446s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extensions ['cmake', 'python']
+[0.446s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extension 'cmake'
+[0.446s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extension 'python'
+[0.446s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extensions ['python_setup_py']
+[0.446s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/data) by extension 'python_setup_py'
+[0.446s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/log) by extensions ['ignore', 'ignore_ament_install']
+[0.446s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/log) by extension 'ignore'
+[0.446s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/log) ignored
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extensions ['ignore', 'ignore_ament_install']
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extension 'ignore'
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extension 'ignore_ament_install'
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extensions ['colcon_pkg']
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extension 'colcon_pkg'
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extensions ['colcon_meta']
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extension 'colcon_meta'
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extensions ['ros']
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extension 'ros'
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extensions ['cmake', 'python']
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extension 'cmake'
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extension 'python'
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extensions ['python_setup_py']
+[0.447s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/public) by extension 'python_setup_py'
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extensions ['ignore', 'ignore_ament_install']
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extension 'ignore'
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extension 'ignore_ament_install'
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extensions ['colcon_pkg']
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extension 'colcon_pkg'
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extensions ['colcon_meta']
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extension 'colcon_meta'
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extensions ['ros']
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extension 'ros'
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extensions ['cmake', 'python']
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extension 'cmake'
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extension 'python'
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extensions ['python_setup_py']
+[0.448s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src) by extension 'python_setup_py'
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extensions ['ignore', 'ignore_ament_install']
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extension 'ignore'
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extension 'ignore_ament_install'
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extensions ['colcon_pkg']
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extension 'colcon_pkg'
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extensions ['colcon_meta']
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extension 'colcon_meta'
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extensions ['ros']
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extension 'ros'
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extensions ['cmake', 'python']
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extension 'cmake'
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extension 'python'
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extensions ['python_setup_py']
+[0.449s] colcon.colcon_core.package_identification Level 1 _identify(/home/bravo6/Desktop/Archive/OrbitControls_3js/src/objects) by extension 'python_setup_py'
+[0.449s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) using defaults

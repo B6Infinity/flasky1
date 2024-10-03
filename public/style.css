@@ -1,0 +1,23 @@
+html, body{
+    background-color: black;
+    height: 100%;
+    margin: 0;
+}
+
+#root-window{
+    height: 95%;
+}
+#render-target{
+    height: 100%;
+}
+
+/* .hover-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+} */
+
+.func_btn{
+    margin: 5px;
+    padding: 5px;
+}
