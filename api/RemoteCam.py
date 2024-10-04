@@ -11,6 +11,7 @@ class RemoteCam:
         `.last_frame` to get the latest frame
         `.kill_cam()` to kill the thread
         '''
+
         self.ip = ip
         self.port = port
         self.name = name

@@ -6,7 +6,7 @@ import { createOrigin } from './objects/origin.js';
 import { createBlob } from './objects/blob.js';
 import { createWorldCam, worldCamSetPose } from "./objects/world_cam.js";
 
-
+// Fetch stuff
 function fetchCamPoses(){
     fetch('http://127.0.0.1:5000/camera_poses')
     .then((response) => response.json())
@@ -26,21 +26,43 @@ function fetchCamPoses(){
 }
 
 function fetchPointPosition(){
-    fetch('http://127.0.0.1:5000/get_point_location')
-    .then((response) => response.json())
-    .then((data) => {
-        POINT_COORDS = [data["x"], data["y"], data["z"]];
-
-        // Convert to meters
-        POINT_COORDS = POINT_COORDS.map((coord) => coord/1000);
-
-        // console.log('Point location:', POINT_COORDS);
-    });
+    if (TRIANGULATE_FLAG) {
+        fetch('http://127.0.0.1:5000/get_point_location')
+        .then((response) => response.json())
+        .then((data) => {
+            POINT_COORDS = [data["x"], data["y"], data["z"]];
+    
+            // Convert to meters
+            POINT_COORDS = POINT_COORDS.map((coord) => coord/1000);
+    
+            // console.log('Point location:', POINT_COORDS);
+        });
+    }
 }
+
+// 3js functions
+function removeExpendibleShit(){
+    console.log('Removing '+ expendible_shit.length + ' things...');
+    while(expendible_shit.length > 0){ 
+        expendible_shit.remove(expendible_shit[0]);
+    }
+}
+function startTriangulation() {
+    TRIANGULATE_FLAG = true;
+}
+function stopTriangulation() {
+    console.log('Stopping Triangulation...');
+    TRIANGULATE_FLAG = false;
+}
+
+
+let TRIANGULATE_FLAG = false;
 
 let CAM_POSE_DATA = {};
 let POINT_COORDS = [];
 let orbitControls;
+
+let expendible_shit = [];
 
 export function createScene() {
     // Initial scene setup
@@ -124,13 +146,13 @@ export function createScene() {
             blob.position.x = POINT_COORDS[0];
             blob.position.y = POINT_COORDS[1];
             blob.position.z = POINT_COORDS[2];
-            createBlob(scene, [POINT_COORDS[0], POINT_COORDS[2], POINT_COORDS[1]], 0.025, "m", 0x33ffc4, false);
+            expendible_shit.append(createBlob(scene, [POINT_COORDS[0], POINT_COORDS[2], POINT_COORDS[1]], 0.025, "m", 0x33ffc4, false));
             // console.log(blob.position.x);
             // blob.position.set(POINT_COORDS[0], POINT_COORDS[1], POINT_COORDS[2]);
-        }    
+        }
 
         // blob.position.set(1,1,1);
-        
+
         orbitControls.update();
         renderer.render(scene, camera.camera);
     }
@@ -157,7 +179,8 @@ export function createScene() {
     return {
         camera,
         start, stop,
-        setIsometricView, lookAtOrigin
+        setIsometricView, lookAtOrigin,
+        removeExpendibleShit, startTriangulation, stopTriangulation
     }
 
 }

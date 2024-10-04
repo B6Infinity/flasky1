@@ -24,6 +24,9 @@
 
     <button id="isometric_view_btn" class="func_btn">Isometric</button>
     <button id="lookatorigin_btn" class="func_btn">Look at Origin</button>
+    <button id="clear_expendible_shit_btn" class="func_btn">Clear Viewport</button>
+    <button id="start_triangulation_btn" class="func_btn">Start Triangulation</button>
+    <button id="stop_triangulation_btn" class="func_btn">Stop Triangulation</button>
 
     <script type="module">
         import {createScene} from './src/scene.js';
@@ -37,6 +40,15 @@
             });
             document.getElementById('lookatorigin_btn').addEventListener('click', () => {
                 window.scene.lookAtOrigin();
+            });
+            document.getElementById('clear_expendible_shit_btn').addEventListener('click', () => {
+                window.scene.removeExpendibleShit();
+            });
+            document.getElementById('start_triangulation_btn').addEventListener('click', () => {
+                window.scene.startTriangulation();
+            });
+            document.getElementById('stop_triangulation_btn').addEventListener('click', () => {
+                window.scene.stopTriangulation();
             });
 
             window.scene.start();

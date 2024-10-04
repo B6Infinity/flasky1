@@ -52,6 +52,7 @@ time.sleep(5)
 
 while True:
     
+
     img = cam.get_frames()
 
     new_frame_time = time.time() 
