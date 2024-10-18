@@ -46,7 +46,8 @@ prev_frame_time = 0
 # used to record the time at which we processed current frame 
 new_frame_time = 0
 
-cam = RemoteCams(["192.168.146.253","192.168.146.85","192.168.146.41"], 8005)
+cam = RemoteCams(["192.168.107.41","192.168.107.253","192.168.107.85"], 8005)
+# cam = RemoteCams(["192.168.107.85"], 8005)
 
 time.sleep(5)
 
@@ -72,6 +73,7 @@ while True:
     cv2.putText(img[0], fps, (7, 70), font , 3, (100, 255, 0), 3, cv2.LINE_AA)
     
     cv2.imshow("test",np.hstack(((img[0],img[1],img[2]))))
+    # cv2.imshow("test", img[0])
     
     k = cv2.waitKey(5)
     if k ==ord('q'):

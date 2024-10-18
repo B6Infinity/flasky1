@@ -28,6 +28,13 @@
     <button id="start_triangulation_btn" class="func_btn">Start Triangulation</button>
     <button id="stop_triangulation_btn" class="func_btn">Stop Triangulation</button>
 
+
+    <div style="width: 30%; display: inline-block;"></div>
+
+
+    <button id="fireup_cams" class="right" >Fire Up Cams</button>
+    <button id="pen_up" class="right" >Toggle Pen</button>
+
     <script type="module">
         import {createScene} from './src/scene.js';
 
@@ -46,9 +53,21 @@
             });
             document.getElementById('start_triangulation_btn').addEventListener('click', () => {
                 window.scene.startTriangulation();
+                console.log("Starting triangulation...");
             });
             document.getElementById('stop_triangulation_btn').addEventListener('click', () => {
                 window.scene.stopTriangulation();
+                console.log("Starting triangulation...");
+            });
+
+
+            document.getElementById('fireup_cams').addEventListener('click', () => {
+                //window.scene.fireUpCameras();
+            });
+
+            document.getElementById('pen_up').addEventListener('click', () => {
+                //window.scene.fireUpCameras();
+                window.scene.togglePen();
             });
 
             window.scene.start();
