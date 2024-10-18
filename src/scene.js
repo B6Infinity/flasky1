@@ -168,8 +168,8 @@ export function createScene() {
     
     // let draw_blob = true;
     
-    // let blob = createBlob(scene, [0,0,0], 0.05, "m", 0xc41dde, true);
-    let blob = createDrone(scene, [0,0,0], 0.05, "m", 0xc41dde, true);
+    let blob = createBlob(scene, [0,0,0], 0.05, "m", 0xc41dde, true);
+    // let blob = createDrone(scene, [0,0,0], 0.05, "m", 0xc41dde, true);
     
     // let worldCam1 = createWorldCam(scene, 0.01);
     // let worldCam2 = createWorldCam(scene, 0.01);
@@ -207,12 +207,12 @@ export function createScene() {
             blob.position.y = POINT_COORDS[1];
             blob.position.z = POINT_COORDS[2];
             if (!PEN_UP) {
-                expendible_shit.push(createBlob(scene, [POINT_COORDS[0], POINT_COORDS[2], POINT_COORDS[1]], 0.025, "m", 0x33ffc4, false));
+                expendible_shit.push(createBlob(scene, [POINT_COORDS[0], POINT_COORDS[2], POINT_COORDS[1]], 0.015, "m", 0x33ffc4, false));
             }
         
             scene.remove(FUCKTHEARROW);
             // DRONE_HEADING_RAD
-            FUCKTHEARROW = drawArrow(scene, [POINT_COORDS[0], POINT_COORDS[2], POINT_COORDS[1]], [DRONE_HEADING_RAD,0 , 0], 0.2);
+            FUCKTHEARROW = drawArrow(scene, [POINT_COORDS[0], POINT_COORDS[2], POINT_COORDS[1]], [DRONE_HEADING_RAD,0 , 0], 0.2, 0xFFFF00);
         }
         
 

@@ -115,7 +115,6 @@ class MasterApp():
 
 
     # LOOP(s) --------------------------------------------
-
     # def start_triangulation(self):
     #     print("Starting triangulation thread...")
     #     while True:
