@@ -57,6 +57,26 @@ function fetchObjectPosition(){
     }
 }
 
+function fetchDrones(){
+    if (TRIANGULATE_FLAG) {
+        fetch('http://127.0.0.1:5000/get_drones')
+        .then((response) => response.json())
+        .then((data) => {
+
+            DRONES = data["drones"];
+
+            // let pos = data["pos"];
+            // let heading_rad = data["heading"];
+            // POINT_COORDS = [pos["x"], pos["y"], pos["z"]];
+            
+            // // Convert to meters
+            // POINT_COORDS = POINT_COORDS.map((coord) => coord/1000);
+            // DRONE_HEADING_RAD = heading_rad;
+            // console.log('Point location:', POINT_COORDS);
+        });
+    }
+}
+
 // Flags for backend
 function flagStartTriangulation(){
     fetch('http://127.0.0.1:5000/start_triangulation')
@@ -108,12 +128,16 @@ function stopTriangulation() {
 let TRIANGULATE_FLAG = false;
 
 let CAM_POSE_DATA = {};
-let POINT_COORDS = [];
-let DRONE_HEADING_RAD = 0;
+let POINT_COORDS = []; // WARNING: DEPRECATED
+let DRONE_HEADING_RAD = 0; // WARNING: DEPRECATED
+let DRONES = [];
+
+
 let orbitControls;
 
 let expendible_shit = [];
-let FUCKTHEARROW = null;
+let FUCKTHEARROW = null; // WARNING: DEPRECATED
+let FUCKARROWZ = [];
 
 let PEN_UP = false;
 
@@ -168,7 +192,10 @@ export function createScene() {
     
     // let draw_blob = true;
     
-    let blob = createBlob(scene, [0,0,0], 0.05, "m", 0xc41dde, true);
+    // let blob = createBlob(scene, [0,0,0], 0.05, "m", 0xc41dde, true);
+
+    let drone_blobs = [];
+
     // let blob = createDrone(scene, [0,0,0], 0.05, "m", 0xc41dde, true);
     
     // let worldCam1 = createWorldCam(scene, 0.01);
@@ -182,7 +209,8 @@ export function createScene() {
     function draw() {
 
         // fetchPointPosition();
-        fetchObjectPosition();
+        // fetchObjectPosition();
+        fetchDrones();
 
 
         // // Camera State
@@ -202,22 +230,45 @@ export function createScene() {
         
         
         // XYZ
-        if (Object.keys(POINT_COORDS).length > 0) {
-            blob.position.x = POINT_COORDS[0];
-            blob.position.y = POINT_COORDS[1];
-            blob.position.z = POINT_COORDS[2];
-            if (!PEN_UP) {
-                expendible_shit.push(createBlob(scene, [POINT_COORDS[0], POINT_COORDS[2], POINT_COORDS[1]], 0.015, "m", 0x33ffc4, false));
+        // if (Object.keys(POINT_COORDS).length > 0) {
+        //     blob.position.x = POINT_COORDS[0];
+        //     blob.position.y = POINT_COORDS[1];
+        //     blob.position.z = POINT_COORDS[2];
+        //     if (!PEN_UP) {
+        //         expendible_shit.push(createBlob(scene, [POINT_COORDS[0], POINT_COORDS[2], POINT_COORDS[1]], 0.015, "m", 0x33ffc4, false));
+        //     }
+        
+        //     scene.remove(FUCKTHEARROW);
+        //     // DRONE_HEADING_RAD
+        //     FUCKTHEARROW = drawArrow(scene, [POINT_COORDS[0], POINT_COORDS[2], POINT_COORDS[1]], [DRONE_HEADING_RAD,0 , 0], 0.2, 0xFFFF00);
+        // }
+        
+        //// DRONES --------
+        
+        if (DRONES.length > 0) {
+            for (let i = 0; i < drone_blobs.length; i++) {
+                scene.remove(drone_blobs.pop());
+                scene.remove(FUCKARROWZ.pop());
             }
-        
-            scene.remove(FUCKTHEARROW);
-            // DRONE_HEADING_RAD
-            FUCKTHEARROW = drawArrow(scene, [POINT_COORDS[0], POINT_COORDS[2], POINT_COORDS[1]], [DRONE_HEADING_RAD,0 , 0], 0.2, 0xFFFF00);
+            console.log("THE :");
+            for (let i = 0; i < DRONES.length; i++) {
+                const drone = DRONES[i];
+                
+                // let POS = [drone["pos"]["x"], drone["pos"]["y"], drone["pos"]["z"]];
+                let POS = drone["pos"];
+                POS = POS.map((coord) => coord / 1000);
+                
+                drone_blobs.push(createBlob(scene, [POS[0], POS[2], POS[1]], 0.05, "m", 0xc41dde, true));
+                if (!PEN_UP) {
+                    expendible_shit.push(createBlob(scene, [POS[0], POS[2], POS[1]], 0.015, "m", 0x33ffc4, false));
+                }
+                
+                console.log(drone["heading"]);
+                // FUCKARROWZ.push(drawArrow(scene, [POS[0], POS[2], POS[1]], [drone["heading"],0 , 0], 0.2, 0xFFFF00));
+                FUCKARROWZ.push(drawArrow(scene, [POS[0], POS[2], POS[1]], [1 * Math.cos(drone["heading"]) ,1 * Math.sin(drone["heading"]), 0], 0.2, 0xFFFF00));
+            }
         }
-        
 
-
-        // blob.position.set(1,1,1);
 
         orbitControls.update();
         renderer.render(scene, camera.camera);

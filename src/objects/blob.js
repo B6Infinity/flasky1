@@ -36,6 +36,7 @@ export function createBlob(scene, position = [0,0,0], size=1, unit = 'm', color 
 }
 
 
+
 export function createDrone(scene, position = [0,0,0], size=1, unit = 'm', color = 0xc41dde, wireframe = true) {
 
     if (unit == "mm") {
